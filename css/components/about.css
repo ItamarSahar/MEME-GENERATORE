@@ -1,0 +1,40 @@
+footer {
+	margin-block-start: 50px;
+}
+
+.about {
+	width: 100%;
+	height: 10rem;
+	padding: 10rem;
+	margin: auto;
+	background-color: var(--main2);
+	color: var(--txt);
+}
+
+.about img {
+	height: 161px;
+	width: 161px;
+	border-radius: 50%;
+}
+
+.about .social a {
+	font-size: 1.5rem;
+	margin-inline-end: 10px;
+	height: 100%;
+	width: 100%;
+	color: var(--theme);
+	background-color: var(--txt);
+	border-radius: 0.8rem;
+	cursor: pointer;
+	transition: box-shadow 0.4s;
+}
+
+.about .social li {
+	height: 3rem;
+	width: 3rem;
+}
+
+.about .social a:hover {
+	color: var(--txt);
+	background-color: var(--theme);
+}

@@ -1,0 +1,39 @@
+.fa-solid {
+	font-family: fa;
+}
+
+.fa {
+	font-family: fab;
+}
+.fa-align-center::before {
+	content: '\f037';
+}
+.fa-align-left::before {
+	content: '\f036';
+}
+.fa-align-right::before {
+	content: '\f038';
+}
+
+.fa-trash-can::before {
+	content: '\f2ed';
+}
+
+.fa-plus::before {
+	content: '\2b';
+}
+.fa-repeat::before {
+	content: '\f363';
+}
+.fa-arrow-down::before {
+	content: '\f063';
+}
+.fa-arrow-up::before {
+	content: '\f062';
+}
+.fa-facebook::before {
+	content: '\f39e';
+}
+.fa-linkedin::before {
+	content: '\f08c';
+}

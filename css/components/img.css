@@ -1,0 +1,11 @@
+.gallery img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border: 2px solid black;
+	min-height: 100px;
+}
+
+.gallery img:hover {
+	box-shadow: 5px 4px 7px 2px #100f0fc7;
+}

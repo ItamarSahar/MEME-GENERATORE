@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="icon" type="image/x-icon" href="/meme-img/meme.png" />
+
+		<title>MEME-GENERATOR</title>
+	</head>
+	<body onload="onInit()">
+		<header>
+			<div class="main-header flex justify-center align-center space-around">
+				<h2 class="logo">MEME<span>GEN</span></h2>
+				<ul class="nav-bar flex clean-list gap">
+					<li>
+						<a
+							href="#"
+							class="flex justify-center align-center"
+							onclick="renderGallery()"
+							>gallery</a
+						>
+					</li>
+					<li>
+						<a href="#About" class="flex justify-center align-center">About</a>
+					</li>
+				</ul>
+			</div>
+			<div class="main-layout">
+				<section class="gallery grid"></section>
+			</div>
+		</header>
+
+		<section class="edit-meme flex none">
+			<div class="canvas-container margin-center">
+				<canvas id="my-canvas" height="450" width="450"></canvas>
+			</div>
+			<div class="edit-buttons style-text flex-column flex align-center">
+				<input
+					class="txt"
+					type="text"
+					placeholder="type your text here"
+					oninput="onLineTxt(this.value)"
+				/>
+				<div class="style-text flex space-between">
+					<button
+						class="fa-solid fa-arrow-up"
+						onclick="onChangePos(-10)"
+						title="UP"
+					></button>
+					<button
+						class="fa-solid fa-arrow-down"
+						onclick="onChangePos(10)"
+						title="DOWN"
+					></button>
+					<button
+						title="ADD LINE"
+						class="fa-solid fa-plus"
+						onclick="onAddLine()"
+					></button>
+					<button
+						class="fa-solid fa-trash-can"
+						onclick="onDeleteLine()"
+						title="DELETE LINE"
+					></button>
+				</div>
+				<div class="style-text flex space-between">
+					<button
+						class="fa-solid fa-repeat"
+						onclick="onChangeFocusLine()"
+						title="CHANGE LINE"
+					></button>
+					<button
+						class="fa-solid fa-align-left"
+						onclick="onChangeAlign('right')"
+						title="ALIGN RIGHT"
+					></button>
+					<button
+						class="fa-solid fa-align-center"
+						onclick="onChangeAlign('center')"
+						title="ALIGN CENTER"
+					></button>
+					<button
+						class="fa-solid fa-align-right"
+						onclick="onChangeAlign('left')"
+						title="ALIGN LEFT"
+					></button>
+				</div>
+				<div class="style-text flex space-between align-center">
+					<button title="INCREASE FONT" onclick="changeFontSize(1)">A+</button>
+					<label class="font-size">48px</label>
+					<button title="DICREASE FONT" onclick="changeFontSize(-1)">A-</button>
+				</div>
+				<div class="style-text flex space-between">
+					<select class="font-family" onchange="onFontChange(this.value)">
+						<option value="">Font-Family</option>
+						<option value="sans-serif">Sans-Serif</option>
+						<option value="arial">Arial</option>
+						<option value="impact">impact</option>
+					</select>
+					<label
+						>Stroke
+						<input
+							title="CHANGE STROKE COLOR"
+							type="color"
+							oninput="onStrokeColor(this.value)"
+						/>
+					</label>
+					<label
+						>Fill
+						<input
+							title="CHANGE FILL COLOR"
+							type="color"
+							oninput="onFillColor(this.value)"
+						/>
+					</label>
+				</div>
+				<div class="upload-service style-text flex space-between">
+					<button title="UPLOAD MEME" onclick="uploadImg()">Upload</button>
+					<button title="DOWNLOAD MEME">
+						<a href="#" onclick="downloadCanvas(this)" download="myphoto"
+							>Download</a
+						>
+					</button>
+				</div>
+			</div>
+		</section>
+		<div class="about flex align-center justify-center space-around" id="About">
+			<img src="meme-img/Itamar.jpeg" alt="my-img" />
+			<div class="text">
+				<h2>Itamar Sahar</h2>
+				<p>I'm a junior <span>Web developer</span>!</p>
+				<ul class="social clean-list flex justify-center gap">
+					<li class="list-inline-item">
+						<a
+							class="flex justify-center align-center"
+							href="https://www.facebook.com/itamar135"
+							target="_blank"
+						>
+							<i class="fa fa-facebook"></i>
+						</a>
+					</li>
+					<li class="list-inline-item">
+						<a
+							class="flex justify-center align-center"
+							href="https://www.linkedin.com/in/itamar-sahar-191565214/"
+							target="_blank"
+						>
+							<i class="fa fa-linkedin"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<script src="js/meme-service.js"></script>
+		<script src="js/upload-service.js"></script>
+		<script src="js/gallery-controller.js"></script>
+		<script src="js/meme-controller.js"></script>
+		<script src="js/main.js"></script>
+		<footer>MEMEGEN Copyright-2022 © Itamar Sahar</footer>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+.main-header {
+	background-color: var(--main2);
+	width: 100%;
+	margin-block-end: 10px;
+}
+
+.main-header .nav-bar {
+	height: 100%;
+}
+
+.main-header .logo {
+	color: var(--txt);
+	font-family: ps;
+	letter-spacing: 0.8rem;
+	font-size: 2rem;
+}
+
+.main-header .nav-bar a {
+	height: 50px;
+	width: 130px;
+	color: var(--theme);
+	cursor: pointer;
+	background-color: var(--txt);
+	transition: box-shadow 0.4s;
+	border-radius: 0.8rem;
+}
+
+.main-header .nav-bar a:hover {
+	color: var(--txt);
+	background-color: var(--theme);
+}
+
+.main-header .nav-bar > *:first-child {
+	border-inline-start: 1px solid var(--primary-clr-900);
+}
+.main-header .nav-bar > * {
+	border-inline-end: 1px solid var(--primary-clr-900);
+}
+
+
+
