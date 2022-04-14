@@ -3,7 +3,7 @@
 	height: 100%;
 	object-fit: cover;
 	border: 2px solid black;
-	min-height: 100px;
+	
 }
 
 .gallery img:hover {

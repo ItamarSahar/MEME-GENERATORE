@@ -15,7 +15,10 @@
 	}
 	.main-header .nav-bar a {
 		height: 30px;
+        width: 80px;
+		margin-inline-end: 10px;
 	}
+
 	.main-header .logo {
 		letter-spacing: 0.6rem;
 		font-size: 1.2rem;
@@ -29,7 +32,6 @@
 		background-color: var(--main2);
 		color: var(--txt);
 	}
-
 	.about img {
 		height: 100px;
 		width: 100px;
@@ -124,11 +126,11 @@
 		min-width: 1160px;
 	}
 
-    .gallery {
-        margin: auto;
-        width: 80%;
-        margin-block-end: 10px;
-    }
+	.gallery {
+		margin: auto;
+		width: 80%;
+		margin-block-end: 10px;
+	}
 	.edit-meme {
 		margin: auto;
 		width: 90%;

@@ -35,3 +35,9 @@
 body.open-editor .edit-meme {
 	display: flex;
 }
+
+
+.img-input label {
+	width: 50%;
+	margin: auto;
+}

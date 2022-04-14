@@ -50,4 +50,5 @@ span {
 }
 label {
 	color: var(--theme);
+	width: 48px;
 }
